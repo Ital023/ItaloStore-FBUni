@@ -1,0 +1,95 @@
+.explore {
+    width: 100%;
+    padding: 3rem 16.2rem 3rem 16.2rem;
+}
+
+.explore h2{
+    color: #201B21;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+}
+
+.card-catalago {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.catalago {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.4rem;
+}
+
+.catalago .catalago-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEEEF;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+}
+
+.botoes {
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botoes button {
+    all:unset;
+    width: 20rem;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    background-color: #0A6847;
+    text-align: center;
+    padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.catalago .catalago-item a{
+    text-decoration: none;
+    width: 20rem;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    align-items: center;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    background-color: #201B21;
+    text-align: center;
+    padding-block: 1rem;
+
+}
+
+.catalago .catalago-item h2{
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #201B21;
+    padding-top: 2rem;
+}
+
+.catalago .catalago-item .catalago-item__descricao {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #67696E;
+    padding: 0.6rem 0 1.4rem 0;
+}
+
+.catalago .catalago-item .catalago-item__preco {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.8rem;
+    color: #201B21;
+    font-weight: 600;
+}
