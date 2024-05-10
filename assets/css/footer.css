@@ -45,6 +45,7 @@ footer ul {
 
     #logo {
         grid-area: logo;
+        padding-bottom: 1rem;
     }
 
     #desc {
