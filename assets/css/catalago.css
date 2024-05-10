@@ -16,10 +16,12 @@
     gap: 3.2rem;
 }
 
-.catalago {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2.4rem;
+.catalago-item__imagem {
+    min-height: 28.4rem;
+    max-width: 26.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .catalago .catalago-item {
@@ -92,4 +94,35 @@
     font-size: 1.8rem;
     color: #201B21;
     font-weight: 600;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    font-size: 3rem;
+    font-family: "Inter", sans-serif;
+    
+    &:hover {
+        background-color: #201B21;
+    }
+}
+
+@media screen and (max-width:540px) { 
+    .explore {
+        width: 100%;
+        padding: 0 0 0 1rem;
+    }
+
+    .catalago {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+    
+    #explore-title{
+        color: #201B21;
+        font-family: "DM Sans", sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    
+
 }

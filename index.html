@@ -6,6 +6,9 @@
     <title>Italo Store - Home</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico"/>
 
+    <link rel="stylesheet" href="./assets/OwlCarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/OwlCarousel/css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     
@@ -43,11 +46,11 @@
 
         <section class="explore">
             <div class="card-catalago">
-                <h2>Explore nossos lançamentos mais recentes</h2>
+                <h2 id="explore-title">Explore nossos lançamentos mais recentes</h2>
 
-                <ul class="catalago ul-unset">
+                <ul class="catalago ul-unset owl-carousel owl-theme">
     
-                    <li class="catalago-item">
+                    <li class="catalago-item item">
                         <div class="catalago-item__imagem">
                             <img src="./assets/img/AirJordan.png" alt="Air Jordan one - OFF WHITE">
                         </div>
@@ -64,7 +67,7 @@
 
                     </li>
     
-                    <li class="catalago-item">
+                    <li class="catalago-item item">
                         <div class="catalago-item__imagem">
                             <img src="./assets/img/NikeAirForce.png" alt="Air Jordan one - OFF WHITE">
                         </div>
@@ -81,7 +84,7 @@
                     </li>
                     
     
-                    <li class="catalago-item">
+                    <li class="catalago-item item">
                         <div class="catalago-item__imagem">
                             <img src="./assets/img/NikeAirForcePremium.png" alt="Air Jordan one - OFF WHITE">
                         </div>
@@ -99,7 +102,7 @@
                     </li>
 
     
-                    <li class="catalago-item">
+                    <li class="catalago-item item">
                         <div class="catalago-item__imagem">
                             <img src="./assets/img/AdidasDaily.png" alt="Air Jordan one - OFF WHITE">
                         </div>
@@ -115,6 +118,54 @@
                         </div>
 
                     </li>
+
+                    <li class="catalago-item item">
+                        <div class="catalago-item__imagem">
+                            <img src="./assets/img/AirJordan4-removebg-preview 1.png" alt="Air Jordan one - OFF WHITE">
+                        </div>
+    
+                        <h2>Nike</h2>
+                        <p class="catalago-item__descricao">AIR JORDAN 4</p>
+    
+                        <p class="catalago-item__preco">R$1000</p>
+
+                        <div class="botoes">
+                            <button>Adicionar ao carrinho <i class="bi bi-bag"></i></button>
+                            <a href="#">Saiba mais</a>
+                        </div>
+                    </li>
+
+                    <li class="catalago-item item">
+                        <div class="catalago-item__imagem">
+                            <img src="./assets/img/travis.png" alt="Air Jordan one - Travis Scott">
+                        </div>
+    
+                        <h2>Nike</h2>
+                        <p class="catalago-item__descricao">AIR JORDAN - Travis Scott</p>
+    
+                        <p class="catalago-item__preco">R$5000</p>
+
+                        <div class="botoes">
+                            <button>Adicionar ao carrinho <i class="bi bi-bag"></i></button>
+                            <a href="#">Saiba mais</a>
+                        </div>
+                    </li>
+
+                    <li class="catalago-item item">
+                        <div class="catalago-item__imagem">
+                            <img src="./assets/img/yeezyboost350.png" alt="Air Jordan one - Travis Scott">
+                        </div>
+    
+                        <h2>Adidas</h2>
+                        <p class="catalago-item__descricao">Yeezy 350</p>
+    
+                        <p class="catalago-item__preco">R$3000</p>
+
+                        <div class="botoes">
+                            <button>Adicionar ao carrinho <i class="bi bi-bag"></i></button>
+                            <a href="#">Saiba mais</a>
+                        </div>
+                    </li>
     
                 </ul>
     
@@ -123,5 +174,8 @@
     
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./assets/OwlCarousel/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
