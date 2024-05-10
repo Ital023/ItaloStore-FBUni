@@ -1,6 +1,6 @@
 .explore {
     width: 100%;
-    padding: 3rem 16.2rem 3rem 16.2rem;
+    padding: 3rem 16.2rem 7rem 16.2rem;
 }
 
 .explore h2{
@@ -108,7 +108,7 @@
 @media screen and (max-width:540px) { 
     .explore {
         width: 100%;
-        padding: 0 0 0 1rem;
+        padding: 0 0 7rem 1rem;
     }
 
     .catalago {
