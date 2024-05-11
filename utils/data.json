@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "nome": "Off-White",
+        "descricao": "Out Of Office 'Ooo' sneakers",
+        "preco": 4200, 
+        "alt": "Air Jordan one - OFF WHITE",
+        "imagem": "./assets/img/AirJordan.png"
+    },
+    {
+        "id": 1,
+        "nome": "Nike",
+        "descricao": "Nike Air Force Premium",
+        "preco": 1100, 
+        "alt": "Nike Air Force Premium",
+        "imagem": "./assets/img/NikeAirForce.png"
+    },
+    {
+        "id": 2,
+        "nome": "Nike",
+        "descricao": "Nike Air Force Premium",
+        "preco": 547, 
+        "alt": "Nike Air Force Premium",
+        "imagem": "./assets/img/NikeAirForcePremium.png"
+    },
+    {
+        "id": 3,
+        "nome": "Adidas",
+        "descricao": "DAILY 3.0 SHOES",
+        "preco": 550, 
+        "alt": "DAILY 3.0 SHOES",
+        "imagem": "./assets/img/AdidasDaily.png"
+    },
+    {
+        "id": 4,
+        "nome": "AIR Jordan",
+        "descricao": "AIR JORDAN 4",
+        "preco": 1000, 
+        "alt": "AIR JORDAN 4",
+        "imagem": "./assets/img/AirJordan4.png"
+    },
+    {
+        "id": 5,
+        "nome": "AIR Jordan",
+        "descricao": "AIR JORDAN - Travis Scott",
+        "preco": 5000, 
+        "alt": "Air Jordan one - Travis Scott",
+        "imagem": "./assets/img/travis.png"
+    }
+]
