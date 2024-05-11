@@ -1,4 +1,5 @@
 let catalago = document.querySelector(".catalago");
+const loader = document.querySelector(".loader");
 
 
 async function carregarDadosJSON() {
@@ -10,6 +11,9 @@ async function carregarDadosJSON() {
 }
 
 async function carregarCatalago() {
+
+
+
     setTimeout(async function() {
         const data = await carregarDadosJSON();
 
@@ -35,7 +39,10 @@ async function carregarCatalago() {
                 }
             }
         });
-    }, 3000); // Tempo de espera em milissegundos
+
+        loader.classList.add("loader-none");
+    }, 5000); // Tempo de espera em milissegundos
+
 }
 
 function criarLI(data) {
