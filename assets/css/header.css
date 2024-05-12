@@ -46,6 +46,23 @@ header .carrinho {
     border-radius: 8px;
 }
 
+.badge-cart {
+    background-color: #EC5E2A;
+    width: 1.6rem;
+    border-radius: 80px;
+    display: flex;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge-cart-none {
+    display: none;
+}
+
 @media screen and (max-width:540px) {
     header {
         padding-inline: 1rem;

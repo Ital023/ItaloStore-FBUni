@@ -143,6 +143,10 @@
     display: none;
 }
 
+.item-id {
+    visibility: hidden;
+}
+
 @media screen and (max-width:540px) { 
     .explore {
         width: 100%;

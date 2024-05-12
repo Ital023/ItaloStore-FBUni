@@ -49,6 +49,7 @@ function criarLI(data) {
     let li = document.createElement("li");
     li.classList.add("catalago-item");
     li.classList.add("item");
+    li.setAttribute("data-id", `${data.id}`);
 
     li.innerHTML = `
                         <div class="catalago-item__imagem">
@@ -61,7 +62,7 @@ function criarLI(data) {
                         <p class="catalago-item__preco">R$${data.preco}</p>
 
                         <div class="botoes">
-                            <button>Adicionar ao carrinho <i class="bi bi-bag"></i></button>
+                            <button class="adicionar-carrinho">Adicionar ao carrinho <i class="bi bi-bag"></i></button>
                             <a href="#">Saiba mais</a>
                         </div>
     `;
