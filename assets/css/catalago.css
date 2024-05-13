@@ -42,7 +42,7 @@
     gap: 1rem;
 }
 
-.botoes button {
+.adicionar-carrinho {
     all:unset;
     width: 20rem;
     border-radius: 8px;
@@ -145,6 +145,12 @@
 
 .item-id {
     visibility: hidden;
+}
+
+.adicionado-carrinho {
+    background-color: dimgray;
+    color: chartreuse;
+    cursor: default;
 }
 
 @media screen and (max-width:540px) { 

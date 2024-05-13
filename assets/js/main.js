@@ -41,7 +41,7 @@ async function carregarCatalago() {
         });
 
         loader.classList.add("loader-none");
-    }, 5000); // Tempo de espera em milissegundos
+    }, 1000); // Tempo de espera em milissegundos
 
 }
 
