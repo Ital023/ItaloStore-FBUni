@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (localStorageCarrinho.includes(elemento.dataset.id)) {
                     botao.textContent = "Adicionado ao carrinho";
                     botao.classList.add("adicionado-carrinho");
-                    botao.disabled = true;
                 }
             });
 

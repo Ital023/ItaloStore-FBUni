@@ -150,7 +150,7 @@
 .adicionado-carrinho {
     background-color: dimgray;
     color: chartreuse;
-    cursor: default;
+    cursor: pointer;
 }
 
 @media screen and (max-width:540px) { 
