@@ -19,3 +19,9 @@
 .a-unset {
     text-decoration: none;
 }
+
+.toast-adicionado, .toast-retirado {
+    font-size: 1.25rem;
+    font-family: "Inter", sans-serif;
+
+}

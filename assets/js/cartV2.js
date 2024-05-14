@@ -53,10 +53,12 @@ setTimeout(function () {
                 adicionarItemAoCarrinho(id);
                 botao.textContent = "Adicionado ao carrinho";
                 botao.classList.add("adicionado-carrinho");
+                mostrarToastAdicionado();
             } else {
                 removerItemDoCarrinho(id);
                 botao.innerHTML = `Adicionar ao carrinho <i class="bi bi-bag"></i>`;
                 botao.classList.remove("adicionado-carrinho");
+                mostrarToastRetirado();
             }
         });
     });
@@ -89,3 +91,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
     
+
+function mostrarToastAdicionado() {
+    Toastify({
+        text: "Adicionado ao carrinho ✅",
+        duration: 3000,
+        close: false,
+        className: "toast-adicionado",
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#0A6847",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+}
+
+function mostrarToastRetirado() {
+    Toastify({
+        text: "Retirado do carrinho 😭",
+        duration: 3000,
+        close: false,
+        className: "toast-retirado",
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "rgb(167, 26, 26)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+}
