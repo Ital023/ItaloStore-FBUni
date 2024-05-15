@@ -1,11 +1,10 @@
+import {carregarCarrinhoDoLocalStorage, carrinho } from "./Functions/cartFunctions.js";
+import {carregarDadosJSON} from "./Functions/GlobalFunctions.js"
+
 const cartList = document.querySelector(".cart-list");
-let carrinho = [];
-let badge = document.querySelector(".badge-cart");
 
 async function carregarCarrinho(){
     const data = await carregarDadosJSON();
-    console.log(typeof data[0].id);
-    console.log(typeof carrinho[0]);
 
 
     for(let i = 0; i < data.length; i++) {
@@ -51,34 +50,7 @@ function criarLi(data) {
 
 document.addEventListener("DOMContentLoaded", () => {
     carregarCarrinhoDoLocalStorage();
-    carregarCarrinho()
+    carregarCarrinho();
+    carregarResumoCarrinho();
 });
 
-function carregarCarrinhoDoLocalStorage() {
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith('produto_')) {
-            const id = key.replace('produto_', '');
-            carrinho.push(id);
-        }
-    }
-    atualizarInterfaceDoCarrinho();
-}
-
-// Função para atualizar a interface do carrinho
-function atualizarInterfaceDoCarrinho() {
-    if (carrinho.length === 0) {
-        badge.classList.add("badge-cart-none");
-    } else {
-        badge.classList.remove("badge-cart-none");
-        badge.textContent = carrinho.length;
-    }
-}
-
-async function carregarDadosJSON() {
-    const data = await fetch("./utils/data.json");
-
-    const dataConvertida = data.json();
-
-    return dataConvertida;
-}

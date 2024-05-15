@@ -1,18 +1,11 @@
+import { carregarDadosJSON, carregarCarrousel } from './Functions/GlobalFunctions.js';
+
+
 let catalago = document.querySelector(".catalago");
 const loader = document.querySelector(".loader");
 
 
-async function carregarDadosJSON() {
-    const data = await fetch("./utils/data.json");
-
-    const dataConvertida = data.json();
-
-    return dataConvertida;
-}
-
 async function carregarCatalago() {
-
-
 
     setTimeout(async function() {
         const data = await carregarDadosJSON();
@@ -22,23 +15,7 @@ async function carregarCatalago() {
             catalago.appendChild(li);
         }
 
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            autoWidth:true,
-            nav:false,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        });
+        carregarCarrousel();
 
         loader.classList.add("loader-none");
     }, 1000); // Tempo de espera em milissegundos
