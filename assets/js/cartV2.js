@@ -23,7 +23,6 @@ setTimeout(function () {
 
 
 
-// Chamada para carregar o carrinho do localStorage ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     carregarCarrinhoDoLocalStorage();
     

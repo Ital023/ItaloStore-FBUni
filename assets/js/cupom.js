@@ -6,13 +6,13 @@ let cupomOn = 0;
 
 function toggleInputCupom() {
     if (cupomOn === 0) {        
-        DivAplicarCupom.classList.remove("animate__zoomOutUp");
+        DivAplicarCupom.classList.remove("animate__bounceOut");
         DivAplicarCupom.classList.remove("input-aplicar_cupom-none");
-        DivAplicarCupom.classList.add("animate__zoomInDown");
+        DivAplicarCupom.classList.add("animate__bounceIn");
         cupomOn = 1;
     } else {
-        DivAplicarCupom.classList.remove("animate__zoomInDown");
-        DivAplicarCupom.classList.add("animate__zoomOutUp");
+        DivAplicarCupom.classList.remove("animate__bounceIn");
+        DivAplicarCupom.classList.add("animate__bounceOut");
         setTimeout(() => {
             DivAplicarCupom.classList.add("input-aplicar_cupom-none");
         }, 500);
@@ -25,12 +25,15 @@ cupomBotao.addEventListener("click", toggleInputCupom);
 const inputCupom = document.querySelector(".input-cupom");
 
 const sendCupom = document.querySelector(".send-cupom");
-
+    
 const descontoValor = document.querySelector(".desconto-valor");
 
 const cupomInvalidoActive = document.querySelector(".cupom-invalido-active");
 
-function aplicarDesconto() {
+export function aplicarDesconto() {
+
+    
+
     if(inputCupom.value === "italomiranda") {
         cupomInvalidoActive.classList.add("cupom-invalido-none");
         inputCupom.disabled = true;

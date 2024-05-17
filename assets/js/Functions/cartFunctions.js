@@ -30,6 +30,19 @@ export function carregarCarrinhoDoLocalStorage() {
     atualizarInterfaceDoCarrinho();
 }
 
+export function getQuantidadeItensCarrinho() {
+    let quantidade = 0;
+
+    for(let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('produto_')) {
+            quantidade++;
+        }
+    }
+
+    return quantidade;
+}
+
 function atualizarInterfaceDoCarrinho() {
     if (carrinho.length === 0) {
         badge.classList.add("badge-cart-none");

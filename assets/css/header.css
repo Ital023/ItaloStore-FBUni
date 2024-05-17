@@ -49,6 +49,7 @@ header .carrinho {
 .badge-cart {
     background-color: #EC5E2A;
     width: 1.6rem;
+    height: 1.6rem;
     border-radius: 80px;
     display: flex;
     color: #fff;
