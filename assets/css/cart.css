@@ -84,11 +84,11 @@
 /* estilização geral */
 
 .cart {
-    width: 65%;
+    min-width: 65%;
 }
 
 .cart-resumo {
-    width: 35%;
+    min-width: 35%;
     display: flex;
     flex-direction: column;
 }
@@ -98,12 +98,81 @@
 .cart-resumo ul {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
-.desconto {
-    padding-bottom: 4.5rem;
-    border-bottom: 1px solid #ccc
+.calculadora-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid #67696E;
+}
+
+#cupom {
+    justify-content: end;
+    flex-direction: column;
+    align-self: end;
+    align-items: end;
+    gap: 1rem;
+}
+
+#cupom input {
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.input-aplicar_cupom {
+    width: 20rem;
+    display: grid;
+    grid-template-columns: 14rem 6rem;
+    border: 2px solid #67696E;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.input-aplicar_cupom-checked {
+    border: 2px solid green;
+    color: green;
+}
+
+#cupom .cupom-invalido-active {
+    font-size: 1.2rem;
+    color: red;
+}
+
+#cupom .cupom-invalido-none {
+    display: none;
+}
+
+.input-aplicar_cupom input {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.input-aplicar_cupom button {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2rem;
+    height: 100%;
+}
+
+
+.cupom-botao {
+    all: unset;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #67696E;
+    justify-self: end;
+}
+
+.input-aplicar_cupom-none {
+    display: none;
 }
 
 #total {
@@ -117,12 +186,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 main {
     display: flex;
     flex-direction: row;
-    padding-bottom: 29.5rem;
+    padding-bottom: 32rem;
     padding-top: 3.2rem;
     padding-inline: 16.2rem;
 }
@@ -132,6 +202,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 6.4rem;
+    min-width: 49rem;
 }
 
 .cart-item {
@@ -183,9 +254,10 @@ main {
 
 .total {
     padding-bottom: 3rem;
+    padding-top: 3rem;
 }
 
-.cart-resumo button {
+.confirmar-cart {
     padding: 20px 80px 20px 80px;
     border-radius: 10px;
     background-color: #201B21;
@@ -237,6 +309,7 @@ main {
         width: 100%;
         flex-direction: column;
         gap: 6.4rem;
+        min-width: 22rem;
     } 
 
     .card-item-infos {

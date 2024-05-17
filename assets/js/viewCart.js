@@ -29,7 +29,7 @@ function criarLi(data) {
                         <div class="card-item-content">
                             <div class="card-item-infos">
                                 <h2>${data.nome}</h2>
-                                <span>R$${data.preco}</span>
+                                <span class="precos">R$${data.preco}</span>
                             </div>
                             <p>${data.descricao}</p>
                         </div>
@@ -51,6 +51,31 @@ function criarLi(data) {
 document.addEventListener("DOMContentLoaded", () => {
     carregarCarrinhoDoLocalStorage();
     carregarCarrinho();
-    carregarResumoCarrinho();
 });
 
+
+setTimeout(() => {
+    let soma = 0;
+    const precos = document.querySelectorAll(".precos");
+
+    precos.forEach(preco => {
+        
+
+        let precoContent = preco.textContent;
+        let valorNumerico = parseFloat(precoContent.replace("R$", ""));
+        
+        soma += valorNumerico;
+
+    })
+
+    const totais = document.querySelectorAll(".preco-total");
+
+    totais.forEach(total => {
+        total.textContent = `R$${soma}`;
+    })
+
+    
+    console.log(soma);
+
+
+}, 1000);
