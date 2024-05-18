@@ -64,7 +64,7 @@
     color: #201B21;
 }
 
-.cart-list .cart-item .card-item-quantity .remove {
+.cart-list .cart-item .card-item-quantity .cart-remove {
     all: unset;
     font-family: "Inter", sans-serif;
     font-size: 1.6rem;
@@ -300,6 +300,10 @@ main {
 }
 
 @media screen and (max-width:540px) { 
+
+    .cart-list {
+        padding: 0;
+    }
 
     .cart-list .cart-item img {
         width: 14rem;

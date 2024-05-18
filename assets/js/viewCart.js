@@ -1,4 +1,5 @@
-import {carregarCarrinhoDoLocalStorage, carrinho } from "./Functions/cartFunctions.js";
+import { calcularPrecoTotal } from "./calculadoraCart.js";
+import {carregarCarrinhoDoLocalStorage, carrinho, removerItemDoCarrinho } from "./Functions/cartFunctions.js";
 import {carregarDadosJSON} from "./Functions/GlobalFunctions.js"
 
 const cartList = document.querySelector(".cart-list");
@@ -21,7 +22,9 @@ async function carregarCarrinho(){
 
 function criarLi(data) {
     let li = document.createElement("li");
+    li.dataset.id = data.id;
     li.classList.add("cart-item");
+    
     li.innerHTML = `
 
     <img src=${data.imagem} alt=${data.alt}>
@@ -39,7 +42,7 @@ function criarLi(data) {
                                 <span>1</span>
                                 <button>+</button>
                             </div>
-                            <button class="remove">Remover</button>
+                            <button class="cart-remove">Remover</button>
                         </div>
                     </div>
     
@@ -52,5 +55,22 @@ document.addEventListener("DOMContentLoaded", () => {
     carregarCarrinhoDoLocalStorage();
     carregarCarrinho();
 });
+
+setTimeout(() => {
+    const buttonsRemove = document.querySelectorAll(".cart-remove");
+
+    buttonsRemove.forEach(button => {
+        button.addEventListener("click", () => {
+            const elementoLi = button.parentNode.parentNode.parentNode;
+            const id = elementoLi.dataset.id;
+            removerItemDoCarrinho(id);
+            elementoLi.remove();
+            calcularPrecoTotal();
+        })
+    })
+
+    
+},1000)
+
 
 

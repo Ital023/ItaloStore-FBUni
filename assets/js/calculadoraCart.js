@@ -8,7 +8,7 @@ const confirmarCart = document.querySelector(".confirmar-cart");
 
 let valorFinal = 0;
 
-async function calcularPrecoTotal() {
+export async function calcularPrecoTotal() {
     let soma = 0;
 
     //SubTotal

@@ -73,3 +73,9 @@
 .modal-none, .fade-none {
     display: none;
 }
+
+@media screen and (max-width:540px) { 
+    .modal-confirmation {
+        min-width: 35rem;
+    }
+}
