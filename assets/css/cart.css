@@ -216,6 +216,7 @@
 }
 
 main {
+    position: relative;
     display: flex;
     flex-direction: row;
     padding-bottom: 32rem;

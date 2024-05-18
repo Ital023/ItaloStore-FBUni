@@ -46,5 +46,13 @@
         "preco": 5000, 
         "alt": "Air Jordan one - Travis Scott",
         "imagem": "./assets/img/travis.png"
+    },
+    {
+        "id": 6,
+        "nome": "Adidas",
+        "descricao": "Adidas Yeezy 350",
+        "preco": 3000, 
+        "alt": "Adidas Yeezy 350",
+        "imagem": "./assets/img/yeezyboost350.png"
     }
 ]

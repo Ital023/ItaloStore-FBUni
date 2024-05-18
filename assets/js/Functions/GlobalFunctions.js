@@ -1,5 +1,5 @@
 export async function carregarDadosJSON() {
-    const data = await fetch("../utils/data.json");
+    const data = await fetch("utils/data.json");
 
     const dataConvertida = await data.json();
 
@@ -24,4 +24,13 @@ export function carregarCarrousel() {
             }
         }
     });
+}
+
+export function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export function formatarNumero(numero) {
+    const numeroFormatado = numero.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  return numeroFormatado.replace('.', ',');
 }

@@ -54,28 +54,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-setTimeout(() => {
-    let soma = 0;
-    const precos = document.querySelectorAll(".precos");
-
-    precos.forEach(preco => {
-        
-
-        let precoContent = preco.textContent;
-        let valorNumerico = parseFloat(precoContent.replace("R$", ""));
-        
-        soma += valorNumerico;
-
-    })
-
-    const totais = document.querySelectorAll(".preco-total");
-
-    totais.forEach(total => {
-        total.textContent = `R$${soma}`;
-    })
-
-    
-    console.log(soma);
-
-
-}, 1000);

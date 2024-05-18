@@ -1,4 +1,4 @@
-import { carrinho } from "./Functions/cartFunctions.js";
+import { getQuantidadeItensCarrinho } from "./Functions/cartFunctions.js";
 
 const cupomBotao = document.querySelector(".cupom-botao");
 const DivAplicarCupom = document.querySelector(".input-aplicar_cupom");
@@ -32,19 +32,17 @@ const cupomInvalidoActive = document.querySelector(".cupom-invalido-active");
 
 export function aplicarDesconto() {
 
-    
-
     if(inputCupom.value === "italomiranda") {
         cupomInvalidoActive.classList.add("cupom-invalido-none");
         inputCupom.disabled = true;
         sendCupom.disabled = true;
         DivAplicarCupom.classList.add("input-aplicar_cupom-checked");
 
-        let precoSubTotal = document.querySelector("#preco-final").textContent;
+        const precoSubtotal = document.querySelector(".preco-subtotal").textContent;
         let precoSubTotalNumerico = parseFloat(precoSubTotal.replace("R$", ""));
 
 
-        let novoPrecoDesconto = precoSubTotalNumerico - (precoSubTotalNumerico * calcularDesconto(carrinho.length));
+        let novoPrecoDesconto = precoSubTotalNumerico - (precoSubTotalNumerico * calcularDesconto(getQuantidadeItensCarrinho()));
 
         return novoPrecoDesconto;
 
