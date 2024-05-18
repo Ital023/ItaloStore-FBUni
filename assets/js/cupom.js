@@ -30,37 +30,19 @@ const descontoValor = document.querySelector(".desconto-valor");
 
 const cupomInvalidoActive = document.querySelector(".cupom-invalido-active");
 
-export function aplicarDesconto() {
+export function isDesconto() {
 
     if(inputCupom.value === "italomiranda") {
         cupomInvalidoActive.classList.add("cupom-invalido-none");
         inputCupom.disabled = true;
         sendCupom.disabled = true;
-        DivAplicarCupom.classList.add("input-aplicar_cupom-checked");
-
-        const precoSubtotal = document.querySelector(".preco-subtotal").textContent;
-        let precoSubTotalNumerico = parseFloat(precoSubTotal.replace("R$", ""));
-
-
-        let novoPrecoDesconto = precoSubTotalNumerico - (precoSubTotalNumerico * calcularDesconto(getQuantidadeItensCarrinho()));
-
-        return novoPrecoDesconto;
-
+        DivAplicarCupom.classList.add("input-aplicar_cupom-checked");  
+        return true;
     }else {
         cupomInvalidoActive.classList.remove("cupom-invalido-none");
+        return false;
     }
 }
 
-sendCupom.addEventListener("click", aplicarDesconto);
 
 
-function calcularDesconto(numeroItens) {
-    if(numeroItens >= 1 && numeroItens <= 3) {
-        return 0.10;
-    }else if (numeroItens > 2 && numeroItens < 5) {
-        return 0.20;
-    }
-    else if (numeroItens >= 5) {
-        return 0.40;
-    }
-}

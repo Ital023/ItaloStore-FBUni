@@ -66,6 +66,15 @@ setTimeout(() => {
             removerItemDoCarrinho(id);
             elementoLi.remove();
             calcularPrecoTotal();
+            const DivAplicarCupom = document.querySelector(".input-aplicar_cupom");
+            DivAplicarCupom.classList.remove("input-aplicar_cupom-checked");  
+            const inputCupom = document.querySelector(".input-cupom");
+            const sendCupom = document.querySelector(".send-cupom");
+            inputCupom.disabled = false;
+            sendCupom.disabled = false;
+            const descontoValorHtml = document.querySelector(".desconto-valor");
+            descontoValorHtml.textContent = `-R$` + 0;
+
         })
     })
 

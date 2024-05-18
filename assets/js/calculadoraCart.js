@@ -1,3 +1,4 @@
+import { isDesconto } from "./cupom.js";
 import { getQuantidadeItensCarrinho } from "./Functions/cartFunctions.js";
 import { sleep, formatarNumero} from "./Functions/GlobalFunctions.js"
 
@@ -7,6 +8,7 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 const confirmarCart = document.querySelector(".confirmar-cart");
 
 let valorFinal = 0;
+let valorFinalNumerico = 0;
 
 export async function calcularPrecoTotal() {
     let soma = 0;
@@ -32,7 +34,7 @@ export async function calcularPrecoTotal() {
 
     //Valor Final
     valorFinal = precoSubTotal + valorFrete + valorTaxa;
-    console.log(valorFinal);
+    valorFinalNumerico = valorFinal;
     const valorFinalFormatado = formatarNumero(valorFinal);
     console.log(valorFinalFormatado);
     valorFinal = valorFinalFormatado;
@@ -82,6 +84,37 @@ function calcularTaxa(valor) {
     }
     return 0;
 }
+
+function aplicarCupom() {
+    if (valorFinal === 0) {
+        return 0;
+    }
+
+    const temDesconto = isDesconto();
+
+    if(temDesconto) {
+        const descontoValorHtml = document.querySelector(".desconto-valor");
+    
+        const desconto = valorFinalNumerico * 0.15;
+        const descontoFormatado = formatarNumero(desconto);
+
+        descontoValorHtml.textContent = `-R$`+ descontoFormatado;
+
+        
+        const valorComDesconto = valorFinalNumerico - desconto;
+        const precoFinal = document.querySelector("#preco-final");
+        const valorComDescontoFormatado = formatarNumero(valorComDesconto);
+        valorFinal = valorComDescontoFormatado;
+        precoFinal.textContent = `R$` + valorFinal;
+
+    }
+}
+
+const sendCupom = document.querySelector(".send-cupom");
+
+sendCupom.addEventListener("click", aplicarCupom);
+
+
 
 async function carregarSubtotal() {
     let soma = 0;
