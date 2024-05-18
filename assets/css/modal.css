@@ -8,7 +8,7 @@
     z-index: 5;
 }
 
-.modal-confirmation {
+.modal-confirmation, .modal-failure {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -59,7 +59,7 @@
     justify-content: flex-end;
 }
 
-.closeModal {
+.closeModal, .closeModal-failure {
     all: unset;
     background-color: #201B21;
     font-size: 1.4rem;

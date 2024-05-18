@@ -24,7 +24,6 @@ export async function calcularPrecoTotal() {
     //Taxa
     const valorTaxa = precoSubTotal * calcularTaxa(precoSubTotal);
     const valorTaxaTotal = precoSubTotal +  valorTaxa;
-    console.log(valorTaxaTotal);
     if(valorTaxa > 0) {
         const valorTaxaFormatado = formatarNumero(valorTaxa);
         document.querySelector(".valor-taxa").textContent = `R$` + valorTaxaFormatado;
@@ -36,7 +35,6 @@ export async function calcularPrecoTotal() {
     valorFinal = precoSubTotal + valorFrete + valorTaxa;
     valorFinalNumerico = valorFinal;
     const valorFinalFormatado = formatarNumero(valorFinal);
-    console.log(valorFinalFormatado);
     valorFinal = valorFinalFormatado;
 
     const precoTotal = document.querySelector(".preco-total");
@@ -56,6 +54,12 @@ function finalizarCompra() {
 
     const totalPedidoModal = document.querySelector(".modal-total-pedido");
 
+    if(valorFinal === "0" || valorFinal === 0 ||valorFinal === "" || valorFinal === null) {
+        const modalFailure = document.querySelector(".modal-failure");
+        modalFailure.classList.remove("modal-none");
+        fade.classList.remove("fade-none");
+        return;
+    }
     fade.classList.remove("fade-none");
     modal.classList.remove("modal-none");
 
