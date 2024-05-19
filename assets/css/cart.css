@@ -274,7 +274,7 @@ main {
 
 }
 
-.card-item-quantity div button {
+.contador-diminuir, .contador-aumentar {
     all: unset;
     cursor: pointer;
 }
@@ -297,6 +297,10 @@ main {
     justify-content: center;
     gap: 1rem;
     cursor: pointer;
+}
+
+.contador-diminuir-disabled {
+    color: #67696E;
 }
 
 @media screen and (max-width:540px) { 

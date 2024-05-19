@@ -38,9 +38,9 @@ function criarLi(data) {
                         </div>
                         <div class="card-item-quantity">
                             <div>
-                                <button>-</button>
-                                <span>1</span>
-                                <button>+</button>
+                                <button class="contador-diminuir">-</button>
+                                <span class="contador-value">1</span>
+                                <button class="contador-aumentar">+</button>
                             </div>
                             <button class="cart-remove">Remover</button>
                         </div>

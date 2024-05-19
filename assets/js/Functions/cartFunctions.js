@@ -4,7 +4,7 @@ let badge = document.querySelector(".badge-cart");
 export function adicionarItemAoCarrinho(id) {
     if (!carrinho.includes(id)) {
         carrinho.push(id);
-        localStorage.setItem(`produto_${id}`, JSON.stringify({ id: id }));
+        localStorage.setItem(`produto_${id}`, JSON.stringify({ id: id , quantity: 1}));
         atualizarInterfaceDoCarrinho();
     }
 }
@@ -22,6 +22,7 @@ export function removerItemDoCarrinho(id) {
 export function carregarCarrinhoDoLocalStorage() {
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
+        console.log(key);
         if (key.startsWith('produto_')) {
             const id = key.replace('produto_', '');
             carrinho.push(id);
