@@ -130,8 +130,15 @@ async function carregarSubtotal() {
     
     precos.forEach(preco => {
         const precoContent = preco.textContent;
-        const  precoContentNumerico = parseFloat(precoContent.replace("R$", ""));
-        soma += precoContentNumerico;
+        const precoContentNumerico = parseFloat(precoContent.replace("R$", ""));
+
+        const idProduto = preco.parentNode.parentNode.parentNode.parentNode.dataset.id;
+        const item = JSON.parse(localStorage.getItem(`produto_${idProduto}`));
+
+        const quantidade = item.quantity;
+
+        soma += precoContentNumerico * quantidade;
+        calcularPrecoTotal();
     })
     
     const somaFormatado = formatarNumero(soma);
