@@ -41,7 +41,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="https://github.com/clement-sof" title="Github da Sofia Galvão">
         <img src="https://avatars.githubusercontent.com/u/87881298?v=4" width="100px;" alt="Foto da Sofia Galvão no GitHub"/><br>
         <sub>
-          <b>Ítalo Miranda</b>
+          <b>Sofia Galvão</b>
         </sub>
       </a>
     </td>
