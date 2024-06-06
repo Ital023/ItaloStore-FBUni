@@ -8,11 +8,11 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 
-## 💻 Prévia do projeto
-<img src="/IPsLocator.gif" alt="Gif do projeto IPs Locator"/>
+## 💻 Link do Figma
+https://www.figma.com/design/oLw6A3OBMwRb2iJMSxaMRB/Frontend-Challenge-(Community)?node-id=0-1
 
 ## 🔗 Link de download
-https://github.com/Ital023/ItaloStore-FBUni.git
+https://github.com/Ital023/PisaLeve-FBUni/archive/refs/heads/main.zip
 
 ## :rocket: Sobre o projeto
 A aplicação desenvolvida em JavaScript, HTML e CSS permite aos usuários visualizar as opções de tênis oferecidos pela loja e realizar a compra. A Interface intuitiva e feito de para uma visão descontraída e jovem com um design clean e minimalista. Com funcionalidades eficientes e diretas, os usuários podem realizar suas compras de maneira pratica e agradável.
